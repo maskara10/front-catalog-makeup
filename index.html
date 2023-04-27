@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
-  <body class="body" onclick="listarP()">
+  <body class="body">
     <h1>Make Up Catalog</h1>
     <header>
-      <a>Nome: <input id="buscar_nome" type="text" /></a>
+      <a>Nome: <input class="buscar_nome" type="text" /><button onclick="buscaNome()">Buscar</button></a>
       <a>
         <label for="marca">Marca: </label>
         <select id="marca" name="marca">
@@ -27,14 +27,20 @@
           <option value="tipo3">Tipo 3</option>
         </select>
       </a>
+      <a>
+        <label for="rating"></label>
+        <select id="rating" name="rating" onchange="selectItens()">
+          <option value="maiores-precos">Maiores Preços</option>
+          <option value="menores-precos">Menores Preços</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+      </a>
     </header>
     <main class="main">
-        <!-- <div class="product">
-            <img class="img_product" src="/exemplo.jpg" alt="exemplo">
-            <p class="name_product">BattomReal Ligerre</p>
-            <a class="marca_product">AVON</a><a class="price_product" >R$ 39,90</a>
-        </div> -->
+      
     </main>
+    <p class="btn_mostrarMais"><button onclick="mostrarMais()">Mostrar Mais</button></p>
 
     <script src="/script.js"></script>
   </body>
